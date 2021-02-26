@@ -6,7 +6,10 @@
     <data>
 
     </data>
-
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,6 +17,7 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:background="@color/colorPrimary"
+            app:titleTextColor="@color/color_striped_w"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -22,22 +26,35 @@
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:text=""
+            android:visibility="gone"
+            android:textSize="@dimen/header_size"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/std_margin_5"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
-        <androidx.fragment.app.FragmentContainerView
+        <fragment
             android:id="@+id/nav_host_fragment_container"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_height="0dp"
             android:layout_width="0dp"
-            android:name="androidx.navigation.fragment.NavHostFragment"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_title"
             app:defaultNavHost="true"
             app:navGraph="@navigation/nav_graph"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/drawer_navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity = "start"
+            android:fitsSystemWindows="true"
+            app:menu="@menu/activity_main_drawer"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

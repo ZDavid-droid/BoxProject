@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:id="@+id/main_item"
+            android:title="@string/menu_main"/>
+        <item android:id="@+id/src_item"
+            android:title="@string/menu_source"/>
+        <item android:id="@+id/subs_item"
+            android:title="@string/menu_substances"/>
+        <item android:id="@+id/notif_item"
+            android:title="@string/menu_notif"/>
+    </group>
+</menu>

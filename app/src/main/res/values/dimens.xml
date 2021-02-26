@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_size">30sp</dimen>
+    <dimen name="primary_size">20sp</dimen>
+    <dimen name="primary_size_1">18sp</dimen>
+
+    <dimen name="std_margin">10dp</dimen>
+    <dimen name="std_margin_5">5dp</dimen>
+    <dimen name="std_padding_5">5dp</dimen>
+</resources>

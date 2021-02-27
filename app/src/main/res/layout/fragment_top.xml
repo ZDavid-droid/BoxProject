@@ -11,17 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".fragments.TopFragment">
-
-        <!-- TODO: Update blank fragment layout -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:paddingLeft="10pt"
-
-            >
-
-
+            android:paddingLeft="10pt">
             <TextView
                 android:id="@+id/some_id"
                 android:layout_width="match_parent"
@@ -29,11 +23,9 @@
                 android:gravity="top"
                 android:text="Молдир Базарбаева"
                 android:textAppearance="@style/some_id" />
-
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -43,7 +35,7 @@
                         android:layout_width="68dp"
                         android:layout_height="match_parent"
                         android:background="#42B33E"
-                        android:text="22"
+                        android:text="24"
                         android:textAlignment="center"
                         android:textColor="@android:color/background_light"
                         android:textSize="30sp"
@@ -65,7 +57,7 @@
                         android:layout_width="68dp"
                         android:layout_height="match_parent"
                         android:background="#00BCD4"
-                        android:text="1"
+                        android:text="0"
                         android:textAlignment="center"
                         android:textColor="@android:color/background_light"
                         android:textSize="30sp"
@@ -99,7 +91,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="239dp">
-
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="210dp"
@@ -162,8 +153,6 @@
                             android:layout_weight="1"
                             android:text="30 лет"
                             android:textStyle="bold" />
-
-
                     </TableRow>
 
                     <TableRow
@@ -345,25 +334,33 @@
                         android:text="3. бронзовая призерка чемпионата Азии-2015."
                         android:textSize="18sp" />
                 </TableRow>
-
-
             </TableLayout>
 
-            <Button
-                style="@style/Widget.AppCompat.Button"
-                android:layout_width="171dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40pt"
-                android:height="60dp"
-                android:background="#2196F3"
-                android:drawableLeft="@android:drawable/ic_menu_more"
-                android:drawablePadding="6dp"
-                android:gravity="left|center"
-                android:padding="6dp"
-                android:text="участвовать"
-                android:textColor="#FFF7F7"
-                android:textStyle="bold" />
-
+                android:padding="5dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="5dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@color/btn_color"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:height="60dp"
+                            android:drawableStart="@android:drawable/ic_menu_more"
+                            android:text="участвовать"
+                            android:backgroundTint="@color/btn_color"
+                            android:padding="10dp"
+                            android:textColor="#FFF7F7"
+                            android:textStyle="bold"/>
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
 
     </FrameLayout>

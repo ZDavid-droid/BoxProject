@@ -7,6 +7,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import kz.krpt.boxproject.databinding.ActivityMainBinding
@@ -24,9 +25,9 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment_container) as NavHostFragment
         setSupportActionBar(binding.toolbar)
-        //val appBar = AppBarConfiguration(setOf(R.id.topFragment), drawer_layout)
-        //toolbar.setupWithNavController(navController, appBar)
         navController = navHostFragment.navController
+        val appBar = AppBarConfiguration(setOf(R.id.topFragment), drawer_layout)
+        toolbar.setupWithNavController(navController, appBar)
         drawerMenu(binding.drawerNavigation)
     }
     private fun drawerMenu(navigation: NavigationView){

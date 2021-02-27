@@ -17,10 +17,9 @@ class TopFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         val binding = DataBindingUtil.inflate<FragmentTopBinding>(inflater, R.layout.fragment_top, container, false)
         return  binding.root
-        //return inflater.inflate(R.layout.fragment_top, container, false)
+
     }
 
 }

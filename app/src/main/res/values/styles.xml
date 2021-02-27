@@ -18,4 +18,10 @@
             #000000
         </item>
     </style>
+
+    <style name="Button.Color"
+        parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">#2196F3</item>
+    </style>
+
 </resources>
